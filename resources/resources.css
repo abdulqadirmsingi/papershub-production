@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+body {
+  max-width: 2000px !important;
+  margin: 0 auto !important;
+}
+.top_container {
+  background: url(../images/intro-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-dark {
+  background-color: inherit !important;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+#nav-img {
+  width: 60px;
+  margin-right: 8px;
+}
+
+.nav-link {
+  font-size: 19px !important;
+  color: white;
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  position: relative;
+  color: white !important;
+  opacity: 1;
+}
+
+.navbar-collapse {
+  transition: 0.3s;
+}
+
+.preview {
+  color: white;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.preview h2 {
+  font-weight: 600;
+  font-size: 40px;
+  padding-bottom: 50px;
+}
+.about-content {
+  /* height: 1000px; */
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-left: 10px;
+}
+
+.about-content h1 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list h2 {
+  margin-bottom: 15px;
+}
+
+.faq .faq-list li {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: #7cc576;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-right: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.faq .faq-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+  min-width: 550px;
+}
+
+.faq .faq-list a.collapsed {
+  color: #343a40;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: rgb(18, 61, 155);
+}
+#faq1 h2 {
+  margin-bottom: 0; /* Remove bottom margin for the heading */
+}
+
+.text-start.mb-5 {
+  display: flex;
+  align-items: center;
+}
+
+.text-start.mb-5 p {
+  margin-bottom: 0;
+}
+
+.footerr {
+  background-size: 100%;
+  padding: 30px 30px 10px 30px;
+  background: rgb(18, 61, 155);
+}
+.footerr ul {
+  padding-left: 0rem;
+}
+.container2 {
+  max-width: 1250px;
+  margin: auto;
+}
+.roww {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-col {
+  width: 25%;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  background-color: white;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col ul li {
+  color: #bbbbbb;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  line-height: 30px;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col .social-links p {
+  color: rgb(219, 202, 202);
+}
+
+@media (min-width: 767px) {
+  .nav-link:hover {
+    color: rgb(204, 184, 0);
+  }
+  #logout-link:hover {
+    color: rgb(204, 184, 0);
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-col {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .top_container {
+    background: url(images/intro-bg.webp);
+    background-repeat: no-repeat;
+  }
+  .preview {
+    padding: 90px 0;
+  }
+
+  .nav-link {
+    color: white;
+  }
+
+  .nav-link.active {
+    color: white !important;
+  }
+}
+
+@media (max-width: 660px) {
+  .about-content {
+    padding-top: 60px;
+  }
+
+  .about-content h1 {
+    font-size: 27px;
+  }
+
+  .faq .faq-list p {
+    min-width: unset;
+  }
+
+  .faq .faq-list li {
+    padding-bottom: 10px;
+  }
+
+  .justify-content-end {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+
+  .g-5,
+  .gx-5 {
+    --bs-gutter-x: unset;
+  }
+}

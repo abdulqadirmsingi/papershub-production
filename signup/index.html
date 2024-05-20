@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Register an account at PapersHub to access a wide range of academic resources for university students, including past papers, notes, summaries, and tutorials."
+    />
+    <title>Register an Account in PapersHub!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../images/stack-of-books.webp" />
+
+    <link rel="stylesheet" href="signup.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN18K1TX2B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-EN18K1TX2B");
+    </script>
+  </head>
+  <body>
+    <header class="top_container">
+      <nav class="navbar navbar-expand-lg navbar-dark py-2">
+        <div class="container">
+          <a href="../" class="navbar-brand">
+            <img src="../images/stack-of-books.webp" alt="PapersHub Logo" id="nav-img" />
+            <h2>PapersHub</h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-label="Toggler Button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="../" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="../about" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="../resources" class="nav-link">Resources</a>
+              </li>
+              <li class="nav-item">
+                <a href="../signup" class="nav-link">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a href="../login" class="nav-link active">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="preview">
+        <h2>REGISTER</h2>
+      </div>
+    </header>
+    <div class="container">
+      <div class="register-form">
+        <h1>Create An Account</h1>
+        <form action="post">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="first_name" placeholder="First Name" name="first_name" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="last_name" placeholder="Last Name" name="last_name" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="your-email@gmail.com" name="email" required />
+          </div>
+          <div class="form-group">
+            <label>Course</label>
+            <select id="program" name="degree_program" class="form-control" required>
+              <option selected disabled hidden value="">Select Program</option>
+              <option value="CS">Computer Science (CS)</option>
+              <option value="CEIT">Computer Engineering (CEIT)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Year Of Study</label>
+            <input type="number" id="year" min="1" max="5" placeholder="Enter Your Year" name="year" oninput="validateYear(this)" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" id="phone_number" placeholder="Phone Number" name="phone_number" required />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Your Password" name="password" required />
+            <i class="fas fa-eye" id="password-toggle"></i>
+          </div>
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" id="confirm_password" placeholder="Confirm Password" name="confirm_password" required />
+            <i class="fas fa-eye" id="confirm-password-toggle"></i>
+          </div>
+          <button class="btn" type="submit" aria-label="Register Button">Register</button>
+          <div class="sign-up">
+            Already Have an Account?
+            <a href="login.html" class="signup-btn"> Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footerr">
+      <div class="container2">
+        <div class="roww">
+          <div class="footer-col">
+            <h4>Main links</h4>
+            <ul>
+              <li><a href="../">Home</a></li>
+              <li><a href="../about">About Us</a></li>
+              <li><a href="../login">Login</a></li>
+              <li><a href="../signup">Signup</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="../resources">Past Papers</a></li>
+              <li><a href="../resources">Notes</a></li>
+              <li><a href="../resources">Summaries</a></li>
+              <li><a href="../resources">Tutorials</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>E-mail</li>
+              <li>papershubtz@gmail.com</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>PapersHub</h4>
+            <div class="social-links">
+              <p>PapersHub is your solution for resources for University Students at an affordable amount</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="signup.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>

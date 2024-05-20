@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+body {
+  max-width: 2000px !important;
+  margin: 0 auto !important;
+}
+.top_container {
+  background: url(../images/intro-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-dark {
+  background-color: inherit !important;
+}
+
+/*Navbar*/
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand h1 {
+  font-size: 36px;
+}
+
+#nav-img {
+  width: 60px;
+  margin-right: 8px;
+}
+
+.nav-link {
+  font-size: 1.19rem !important;
+  color: white;
+  opacity: 0.8;
+  transition: 0.15s;
+}
+
+.nav-link.active {
+  position: relative;
+  color: white !important;
+  opacity: 1;
+}
+
+.navbar-collapse {
+  transition: 0.5s;
+}
+
+.preview {
+  color: white;
+  padding-top: 60px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.preview h2 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+/*** About Start ***/
+.about .about-img {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.about .about-img .about-experience {
+  position: absolute;
+  top: 125px;
+  left: -80px;
+  transform: rotate(-90deg);
+  background: transparent;
+  color: var(--bs-primary);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/*** About End ***/
+
+/*** Feature Start ***/
+.feature .feature-item {
+  position: relative;
+  display: flex;
+  border: 1px solid var(--bs-primary);
+  border-radius: 10px;
+  background: var(--bs-light);
+  transition: 0.5s;
+}
+
+.feature .feature-item::before {
+  width: 0;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.feature .feature-item:hover::before {
+  width: 100%;
+  background: var(--bs-primary);
+}
+
+.feature .feature-item .feature-icon {
+  display: inline-flex;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.feature .feature-item:hover .feature-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.feature .feature-item:hover .feature-content {
+  position: relative;
+  color: var(--bs-white);
+  z-index: 2;
+}
+
+.feature .feature-item:hover .feature-content h5 {
+  color: var(--bs-dark);
+}
+/*** Feature End ***/
+.footerr {
+  background-size: 100%;
+  padding: 30px 30px 10px 30px;
+  background: rgb(18, 61, 155);
+}
+.footerr ul {
+  padding-left: 0rem;
+}
+.container2 {
+  max-width: 1250px;
+  margin: auto;
+}
+.roww {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-col {
+  width: 25%;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  background-color: white;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col ul li {
+  color: #bbbbbb;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  line-height: 30px;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col .social-links p {
+  color: rgb(219, 202, 202);
+}
+
+@media (max-width: 900px) {
+  .footer-col {
+    width: 50%;
+  }
+}
+
+@media (min-width: 767px) {
+  .nav-link:hover {
+    color: rgb(204, 184, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .top_container {
+    background: url(../images/intro-bg.webp);
+    background-repeat: no-repeat;
+  }
+  .preview {
+    padding: 90px 0;
+  }
+
+  .nav-link {
+    color: white;
+  }
+
+  .nav-link.active {
+    color: white !important;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
