@@ -16,6 +16,7 @@
     />
     <link rel="icon" href="../images/stack-of-books.webp" />
     <link rel="stylesheet" href="resources.css" />
+    <script src="resources.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN18K1TX2B"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -56,7 +57,7 @@
                 <a href="../signup" class="nav-link">Sign Up</a>
               </li>
               <li class="nav-item">
-                <a href="../login" class="nav-link active" id="logout=link">Logout</a>
+                <a href="../login" class="nav-link active" id="logout-link">Logout</a>
               </li>
             </ul>
           </div>
@@ -151,7 +152,6 @@
   const deleteCookie = (name) => {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   };
-
   const logoutLink = document.getElementById("logout-link");
   if (logoutLink) {
     logoutLink.addEventListener("click", () => {
@@ -163,6 +163,6 @@
   }
 });
     </script>
-    <script src="resources.js"></script>
+    
   </body>
 </html>

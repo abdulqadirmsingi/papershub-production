@@ -68,17 +68,10 @@ const refreshAccessToken = async (refreshToken) => {
 
 // Helper function to handle token verification and renewal
 const handleTokenVerification = async () => {
-  const accessToken = getCookie("accessToken");
-  const refreshToken = getCookie("refreshToken");
-
   if (!accessToken || !refreshToken) {
     console.error("Access token or refresh token is missing.");
     return null; // No tokens found, return null
   }
-
-  const deleteCookie = (name) => {
-    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-  };
   const isAccessTokenValid = await verifyToken(accessToken);
 
   if (!isAccessTokenValid) {
@@ -86,7 +79,6 @@ const handleTokenVerification = async () => {
     if (newAccessToken) {
       return newAccessToken; // Return the new access token
     }
-
     console.error("Failed to refresh access token.");
     deleteCookie("accessToken");
     deleteCookie("refreshToken");

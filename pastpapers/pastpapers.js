@@ -35,13 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   const fetchUserSubscriptionStatus = async () => {
     try {
-      const response = await fetch("https://papershub-prod-ee9f6b8e1268.herokuapp.com/auth/users/me/", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://papershub-prod-ee9f6b8e1268.herokuapp.com/auth/users/me/",
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+          credentials: "include",
+        }
+      );
       const userData = await response.json();
       return userData.subscribed;
     } catch (error) {
@@ -53,18 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const isSubscribed = await fetchUserSubscriptionStatus();
 
     // Make a fetch request to the backend API using the provided course ID
-    fetch(`https://papershub-prod-ee9f6b8e1268.herokuapp.com/papers/Course/${courseId}/paper/`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-      credentials: "include",
-    })
+    fetch(
+      `https://papershub-prod-ee9f6b8e1268.herokuapp.com/papershub/Course/${courseId}/paper/`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+        credentials: "include",
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         // Assuming data is an array of past papers for the given course
         // Modify the code below to display the past papers as per your UI design
-        console.log(data);
         data
           .filter((course) => course.course === courseId)
           .forEach((paper) => {
